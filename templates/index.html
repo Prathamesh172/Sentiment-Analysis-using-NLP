@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            color: #00bcd4;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #ccc;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .steps, .samples, .why-matters {
+            margin: 40px 0;
+            padding: 20px;
+            background-color: #1e1e1e;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 188, 212, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .steps:hover, .samples:hover, .why-matters:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 8px 30px rgba(0, 188, 212, 0.2);
+        }
+
+        .steps ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .steps li {
+            margin: 10px 0;
+            font-size: 1.1rem;
+        }
+
+        .samples div {
+            margin: 10px 0;
+            font-style: italic;
+        }
+
+        .btn-predict {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 24px;
+            background-color: #00bcd4;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .btn-predict:hover {
+            background-color: #0097a7;
+            transform: scale(1.05);
+        }
+
+        .quote {
+            text-align: center;
+            margin-top: 60px;
+            font-style: italic;
+            color: #888;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <h1>AI-Powered Sentiment Analyzer</h1>
+            <p>This web app analyzes customer reviews using machine learning to determine whether the sentiment is positive, neutral, or negative.</p>
+            <a href="/predict" class="btn-predict">🔍 Try the Sentiment Predictor</a>
+        </div>
+
+        <div class="steps">
+            <h2>How It Works</h2>
+            <ul>
+                <li>✍️ Paste your review and summary</li>
+                <li>🧠 Our ML model analyzes the emotion</li>
+                <li>📈 Get the sentiment score instantly</li>
+            </ul>
+        </div>
+
+        <div class="samples">
+            <h2>Sample Reviews</h2>
+            <div>“Absolutely amazing! Loved every bit of it.” → 😊 Positive</div>
+            <div>“It’s okay I guess, not too bad.” → 😐 Neutral</div>
+            <div>“Worst experience of my life.” → 😠 Negative</div>
+        </div>
+
+        <div class="why-matters">
+            <h2>Why It Matters</h2>
+            <p>Understanding customer sentiment is essential for improving products, services, and communication. This tool helps businesses, researchers, and developers gain insights from raw textual feedback.</p>
+        </div>
+
+        <div class="quote">
+            “The words may lie, but the tone never does.”
+        </div>
+
+        <div class="footer">
+            Built with ❤️ by Prathamesh | Powered by Flask & Machine Learning
+        </div>
+    </div>
+</body>
+</html>
