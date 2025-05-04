@@ -1,6 +1,6 @@
 # 🧠 Sentiment Analysis Web App
 
-A stylish and simple Flask-based web application that predicts the **sentiment** (Positive, Neutral, or Negative) of product reviews, powered by Natural Language Processing and Machine Learning.
+A stylish and simple Flask-based web application that predicts the **sentiment** (Positive, Neutral, or Negative) of product reviews or any statement in general powered by Natural Language Processing and Machine Learning.
 
 <div align="center">
   <img src="https://img.shields.io/badge/Made_with-Flask-blue?style=flat-square" alt="Flask Badge">
