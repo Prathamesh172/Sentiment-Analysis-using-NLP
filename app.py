@@ -1,15 +1,13 @@
 from flask import Flask, render_template, request
 import joblib
 import re
-import os  # <-- Added for Hugging Face port handling
-
+import os  
 app = Flask(__name__)
 
-# Load the saved model and vectorizer
 model = joblib.load("sentiment_model.pkl")
 vectorizer = joblib.load("tfidf_vectorizer.pkl")
 
-# Text preprocessing (your final version)
+# Text preprocessing 
 def clean_text(text):
     text = re.sub(r"http\S+|www\S+|https\S+", '', text, flags=re.MULTILINE)
     text = re.sub(r'\@w+|\#','', text)
@@ -45,8 +43,8 @@ def predict():
 
         return render_template('predict.html', prediction=prediction_label, emoji=emoji)
     
-    return render_template('predict.html')  # Just show the form if GET request
-
+    return render_template('predict.html')  
 if __name__ == '__main__':
-    port = int(os.environ.get("PORT", 7860))  # <-- Default Hugging Face port
+    port = int(os.environ.get("PORT", 7860))
     app.run(host='0.0.0.0', port=port)
+
